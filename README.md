@@ -1,8 +1,8 @@
 # hexo-sorce-file
 
-this repository is hexo blog's file ,author can use this to rebuild his blog
+This repository is hexo blog's file ,author can use this to rebuild his blog
 
-git commands:
+**Git commands:**
 
 **First, you should new a empty folder.**
 
