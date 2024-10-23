@@ -1,0 +1,70 @@
+toc:                 #文章/文档的目录树组件，显示文章和文档的目录结构
+  layout: toc
+  list_number: false # 是否显示序号
+  min_depth: 2       # 建议不要低于 2 即从 H2 标签开始解析（H1标签用于文章大标题）
+  max_depth: 5 # 5 代表最多解析到 H5 标签
+  fallback: recent # toc 的 fallback 默认是 recent，即一篇文章没有 TOC 的时候会显示一个 recent
+  collapse: auto # true / false / auto (始终折叠/不折叠/自动折叠)
+
+recent:
+  layout: recent
+  rss: # /atom.xml # npm i hexo-generator-feed
+  limit: 8 # Count of post
+
+
+
+welcome:
+  layout: markdown
+  title: 欢迎来到枣糕同学的博客
+  linklist: # 与 linklist 组件写法相同
+    columns: 1 
+    items:
+      - icon: 
+        title: 前往枣糕个人页
+        url: /about/
+  content: |
+    枣糕同学 是一位计算机在读研究生，目前就读于深圳大学计算机软件学院。
+    希望通过本博客展示出他的学习历程！
+    <br>
+    本站建站于2021年，于2024年重新维护恢复运营，希望我们能够一起进步。
+    <br>
+    点击下方按钮了解更多
+  src: # 可以设置外部 md 文件链接
+
+
+linklist:
+  layout: linklist
+  columns: 1 
+  items:
+    - icon: 'solar:documents-bold-duoton' # 或者 icons.yml 中设置的 icon 名称
+      title: 关于
+      url: /about/
+
+
+
+tagcloud:
+  layout: tagcloud
+  title: 标签云
+  # 标签云配置
+  min_font: 12
+  max_font: 24
+  amount: 100
+  orderby: name
+  order: 1 # 1, sac 升序；-1, desc 降序
+  color: true # 使用颜色
+  start_color:  # 开始的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  end_color:  # 结束的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  show_count: true # 显示每个标签的文章总数
+
+ghuser:
+  layout: ghuser
+  username: GEM-Jay # your github login username
+  avatar: true # show avatar or not
+  menu: true # show menu or not
+
+timeline:
+  layout: timeline
+  title: 近期动态
+  api: https://api.github.com/repos/GEM-Jay/GEM-Jay.github.io/issues # 若你想限制数量，在api链接后面加上?per_page=1指限制为1条
+  user: # 是否过滤只显示某个人发布的内容，如果要筛选多人，用英文逗号隔开
+  hide: # title,footer # 隐藏标题或底部 # 此功能需要 Stellar v1.13.0
